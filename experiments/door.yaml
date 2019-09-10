@@ -1,0 +1,19 @@
+duration: 240
+objective: duration
+k: 1.0
+map_type: door
+width: 70
+model_path: models/thymio.h5
+size: 5.0
+threshold: 0.98
+samples: 10
+number_of_processes: 4
+source:
+  x: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]
+  y: [4]
+  theta: [-1.5708]
+target:
+  x: [4]
+  y: [2]
+  theta: [0]
+tolerance: 0.1

@@ -1,0 +1,11 @@
+duration: 120
+image_path: rough.png
+sample_image_path: rough_mask.png
+size: 10.0
+z_scale: 0.8
+model_path: models/anymal.h5
+min_dist: 3
+objective: survival
+threshold: 0.5
+samples: 1000
+number_of_processes: 64

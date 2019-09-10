@@ -1,0 +1,44 @@
+version: '3.3'
+services:
+  notebook:
+    image: jeguzzi/ple
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/app/notebooks
+    ports:
+      - 8888:8888
+  experiment_anymal_surf:
+    image: jeguzzi/ple
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
+    command: /bin/bash -c "cd /app && python3 experiment_anymal.py surf.yaml"
+  experiment_anymal_surf:
+    image: jeguzzi/ple
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
+    command: /bin/bash -c "cd /app && python3 experiment_anymal.py rough.yaml"
+  experiment_thymio_door:
+    image: jeguzzi/ple
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
+    command: /bin/bash -c "cd /app && python3 experiment_thymio.py door.yaml"

@@ -1,0 +1,13 @@
+duration: 120
+objective: survival
+image_path: maps/surf.png
+model_path: models/anymal.h5
+masked_mse: True
+size: 10.0
+z_scale: 0.8
+threshold: 0.5
+initial_sample: 0
+samples: 8
+number_of_processes: 8
+min_dist: 3
+sample_image_path: maps/surf_mask.png
