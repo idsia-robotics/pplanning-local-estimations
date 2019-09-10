@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   notebook:
-    image: jeguzzi/ple
+    image: jeguzzi/ompl_tf
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
     ports:
       - 8888:8888
   experiment_anymal_surf:
-    image: jeguzzi/ple
+    image: jeguzzi/ompl_tf
     build:
       context: .
       dockerfile: Dockerfile
@@ -23,7 +23,7 @@ services:
       - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
     command: /bin/bash -c "cd /app && python3 experiment_anymal.py surf.yaml"
   experiment_anymal_surf:
-    image: jeguzzi/ple
+    image: jeguzzi/ompl_tf
     build:
       context: .
       dockerfile: Dockerfile
@@ -33,7 +33,7 @@ services:
       - "PYTHONPATH=/usr/local/lib/python3/dist-packages:/app/src"
     command: /bin/bash -c "cd /app && python3 experiment_anymal.py rough.yaml"
   experiment_thymio_door:
-    image: jeguzzi/ple
+    image: jeguzzi/ompl_tf
     build:
       context: .
       dockerfile: Dockerfile
