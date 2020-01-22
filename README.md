@@ -1,7 +1,7 @@
 # Path planning with local motion estimations
 ## Supplementary material
 
-This repository contains supplementary material for the paper "Path planning with local motion estimations" by J. Guzzi, O. R. Chavez-Garcia, M. Nava, L. M. Gambardella and A. Giusti, submitted to RAL-ICRA 2020.
+This repository contains supplementary material for the paper "Path planning with local motion estimations" by J. Guzzi, O. R. Chavez-Garcia, M. Nava, L. M. Gambardella and A. Giusti, accepted for publication in RA-L and presentation at ICRA 2020.
 
 ### Reproducing the experiments
 
